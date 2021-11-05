@@ -13,11 +13,11 @@ describe('Person class datatypes', () => {
         expect(typeof testPerson.name).toBe('string')
     })
 
-    // test('Parents should be type [BritishRoyalty]', () => {
-    //     const testPerson = new BritishRoyalty('Eric')
-    //     const testParent = new BritishRoyalty("Gerry")
-    //     testPerson.addParent(testParent)
+    test('Parents should be type [BritishRoyalty]', () => {
+        const testPerson = new BritishRoyalty('Eric')
+        const testParent = new BritishRoyalty("Gerry")
+        testPerson.addParent(testParent)
 
-    //     expect(typeof testPerson.parents[0] === BritishRoyalty)
-    // })
+        expect(typeof testPerson.parents[0] === BritishRoyalty)
+    })
 })

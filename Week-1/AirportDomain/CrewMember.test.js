@@ -17,4 +17,17 @@ describe('Crew Member Class Test', () => {
     })
 
 
+    test('CrewMemebr must have a position', () => {
+        expect(() => new CrewMember('Member')).toThrowError('No position given')
+    })
+
+    test('Crew must have numeric staff number', () => {
+        expect(() => new CrewMember('Member', 'FA')).toThrowError('No Staff number given')
+    })
+
+    test('Crew must have a staff number', () => {
+        expect(()=> new CrewMember('Member3', 'PL')).toThrowError('No staff number given')
+    })
+
+
 })

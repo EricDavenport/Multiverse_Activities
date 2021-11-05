@@ -8,11 +8,11 @@ class CrewMember {
             throw new Error('No Name added')
         }
 
-        // if (position) {
-        //     this.position = position
-        // } else {
-        //     throw new Error('No position given')
-        // }
+        if (position) {
+            this.position = position
+        } else {
+            throw new Error('No position given')
+        }
 
         
         this.staffNumber = staffNumber

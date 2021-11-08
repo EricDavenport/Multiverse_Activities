@@ -8,7 +8,7 @@ class Plane {
     }
 
     boardPassenger(passenger) {
-        this.passenger.push(passenger)
+        this.passengers.push(passenger)
     }
 
     boardCrewMember(crewMember) {

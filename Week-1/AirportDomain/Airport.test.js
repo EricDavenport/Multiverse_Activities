@@ -13,7 +13,7 @@ describe('Test the methods and properties of airport', () => {
         expect(a1.planes.length > 0).toBeTruthy()
     })
 
-    test('Plane can take off' () => {
+    // test('Plane can take off' () => {
         
-    })
+    // })
 })

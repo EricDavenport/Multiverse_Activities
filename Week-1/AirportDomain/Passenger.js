@@ -1,16 +1,13 @@
 const Bag = require("./Bag")
+const Person = require('./Person')
 
-class Passenger {
+class Passenger extends Person{
     constructor(name, passportNumber, seatNumber) {
-        this.name = name
+        super(name)
         this.passportNumber = passportNumber
         this.seatNumber = seatNumber
-        this.bags = []
     }
 
-    addBag(bag) {
-        this.bags.push(bag)
-    }
 }
 
 module.exports = Passenger

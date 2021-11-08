@@ -13,7 +13,16 @@ describe('Test the methods and properties of airport', () => {
         expect(a1.planes.length > 0).toBeTruthy()
     })
 
-    // test('Plane can take off' () => {
+    test('Plane can take off', () => {
+        let p1 = new Plane('A150')
+        let a1 = new Airport('JFK')
+        let p2 = new Plane('B230')
+        let p3 = new Plane('C830')
+        a1.planeLanding(p1)
+        a1.planeLanding(p3)
+        a1.planeLanding(p2)
+        a1.planeTakeOff(p1)
         
-    // })
+        expect(a1.planes.includes(p2) && a1.planes.includes(p3)).toBeTruthy()
+    })
 })

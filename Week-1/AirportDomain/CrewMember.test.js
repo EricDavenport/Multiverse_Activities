@@ -12,8 +12,8 @@ describe('Crew Member Class Test', () => {
         expect(() =>  new CrewMember(234, 123, 2)).toThrowError('Names must be String format')
     })
 
-    test('CrewMemebr must have a position', () => {
-        expect(() => new CrewMember('Member').position).toBeDefined()
+    test('CrewMember must have a position', () => {
+        expect(() => new CrewMember('Member', 'FA').position).toBeDefined()
     })
 
 
@@ -23,10 +23,6 @@ describe('Crew Member Class Test', () => {
 
     test('Crew must have numeric staff number', () => {
         expect(() => new CrewMember('Member', 'FA')).toThrowError('No Staff number given')
-    })
-
-    test('Crew must have a staff number', () => {
-        expect(()=> new CrewMember('Member3', 'PL')).toThrowError('No staff number given')
     })
 
 

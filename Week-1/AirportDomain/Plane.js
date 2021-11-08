@@ -1,6 +1,8 @@
 class Plane {
     constructor(type) {
         this.type = type
+        this.destination = ''
+        this.origin = ''
         this.passengers = []
         this.crewMembers = []
     }
@@ -15,3 +17,6 @@ class Plane {
 }
 
 module.exports = Plane
+
+
+// planes needs indicator of origin and destination locations

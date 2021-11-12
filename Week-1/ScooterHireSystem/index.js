@@ -72,32 +72,24 @@ do {
     i++
 } while (i < scooters.length)
 
-
-// console.log('Coffee Stop', coffeStop.scooters.length)
-// console.log('Coffee Stop', coffeStop.scooters)
-
-// console.log('Fourth: ',fourthStreet.scooters.length)
-// console.log('Fourth: ',fourthStreet.scooters)
-
-// console.log('third: ',thirdStreet.scooters.length)
-// console.log('third: ',thirdStreet.scooters)
-
-// const name = prompt('Hello! What is your name?')
-// const age = prompt('How old Are You?')
-// const rider = new Rider(name, age)
-// console.log('Welcome ', rider.name)
-
 const eric = new Rider('Eric', 30)
 
+// Welcome new rider
 console.log('\nNew rider', eric.name, '. Welcome!!\n')
 
-
+// offer station selection
 console.log('Select a station:\n  1-', coffeStop.name, '\n  2-', fourthStreet.name, '\n  3-', thirdStreet.name)
 
+// force selection
 console.log('You selected', coffeStop.name)
 console.log('Scooters available are:\n', coffeStop.scooters)
+
+// Scootersa are broken
 console.log('OHHH!!! looks like all of the scooters are broken!!\nPlease Select a new location or report scooters broken for repair.\n-Management\n')
+// choose new option
 console.log('Choose an option:\n  1-', coffeStop.name, '\n  2-', fourthStreet.name, '\n  3-', thirdStreet.name, '\n  4- Report Broken')
+
+// Call repairScooters()
 console.log('You selected report broken...One moment please')
 console.log('...')
 console.log('...')
@@ -106,12 +98,16 @@ console.log('...')
 console.log('...')
 console.log('...')
 coffeStop.repairScooters()
+
+// Display scooters showing repaired with new selection
 console.log('Scooters available at', coffeStop.name, ' are...\n\n', coffeStop.scooters)
 console.log('Please select a scooter')
 console.log('You selected', sco4.id )
 
+// allow rental of scooter
 eric.rentScooter(sco4)
 
+// display riding scooter to new location
 console.log(eric.name, 'rode to', fourthStreet.name, 'charging station.\nWhere he returned', sco4.id)
 
 eric.returnScooter(fourthStreet, sco4, true)

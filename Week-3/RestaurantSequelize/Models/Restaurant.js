@@ -1,5 +1,6 @@
-const { Game } = require('../../ORMTest/Models/Games')
-const { db, DataTypes, Model } = require('../db')
+const { db, DataTypes } = require('../db')
+const { Model } = require('sequelize')
+// const { Menu } = require('./Menu')
 
 class Restaurant extends Model {
 
@@ -13,4 +14,6 @@ Restaurant.init({
     timestamps: false
 })
 
-module.exports = { Restaurant }
+// Restaurant.hasMany(Menu, {as: 'menus', foreignKey: 'restaurant_id'})
+
+module.exports = Restaurant

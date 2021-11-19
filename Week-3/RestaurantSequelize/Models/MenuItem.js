@@ -14,4 +14,4 @@ MenuItem.init({
     timestamps: false
 })
 
-module.exports = { MenuItem }
+module.exports = MenuItem

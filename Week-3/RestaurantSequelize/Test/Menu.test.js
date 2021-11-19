@@ -1,5 +1,7 @@
 const {db} = require('../db')
-const {Menu} = require('../Models/Menu')
+// const {Menu} = require('../Models/Menu')
+const Menu = require('../Models/Menu')
+
 
 describe('Menu Test', () => {
     beforeAll(async () => {

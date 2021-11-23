@@ -1,9 +1,15 @@
 const express = require('express');
+const seed = require('./seed')
 const {Restaurant, Menu} = require('./Models/index');
-const server = express();
-const port = 3000;
+const app = express();
+const PORT = 3000;
 
-server.get('/flipcoin', (req, res) => {
+
+seed()
+
+app.use(express.json())
+
+app.get('/flipcoin', (req, res) => {
     const random = (Math.floor(Math.random() * 2) === 0)
     // res.send(random)
     console.log(random)
@@ -12,13 +18,13 @@ server.get('/flipcoin', (req, res) => {
 
 })
 
-server.get('/restaurants', async (req, res) => {
+app.get('/restaurants', async (req, res) => {
     const restaurants = await Restaurant.findAll() 
     res.json({restaurants})
 })
 
-server.listen(port, () => {
-    console.log(`Server is listening to port: ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is listening to port: ${PORT}`);
 })
 
 

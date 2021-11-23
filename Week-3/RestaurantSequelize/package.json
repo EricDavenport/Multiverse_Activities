@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:report": "jest --coverage=true"
+    "test:report": "jest --coverage=true",
+    "start" : "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
     "sequelize": "^6.9.0",
     "sqlite3": "^5.0.2"
   }

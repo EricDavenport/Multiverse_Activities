@@ -1,0 +1,14 @@
+{
+    "showData": [
+        {"name": "Futurama", "genre": "Animation", "seasons": 6, "ratings": 10, "UserId": 2},
+        {"name": "Family Guy", "genre": "Comedy", "seasons": 11, "ratings": 7, "UserId": 1},
+        {"name": "Attack On Titan", "genre": "Anime", "seasons": 2, "ratings": 5, "UserId": 1},
+        {"name": "Naruto", "genre": "Anime", "seasons": 2, "ratings": 8, "UserId": 4},
+        {"name": "One Piece", "genre": "Anime", "seasons": 4, "ratings": 7, "UserId": 2},
+        {"name": "Avatar The Last Airbender", "genre": "Animation", "seasons": 8, "ratings": 8, "UserId": 1},
+        {"name": "Lucifer", "genre": "Drama", "seasons": 3, "ratings": 7, "UserId": 3},
+        {"name": "Demon Slayer", "genre": "Anime", "seasons": 1, "ratings": 9, "UserId": 3},
+        {"name": "Hunter X Hunter", "genre": "Anime", "seasons": 8, "ratings": 3, "UserId": 4},
+        {"name": "Yu-Gi-Oh", "genre": "Anime", "seasons": 3, "ratings": 2, "UserId": 1}    
+    ]
+}

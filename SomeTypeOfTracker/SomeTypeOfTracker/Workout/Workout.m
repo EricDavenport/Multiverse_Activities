@@ -7,7 +7,12 @@
 
 #import "Workout.h"
 
+@import FirebaseFirestore;
+@import FirebaseCore;
+
 @implementation Workout
+
+//@property (nonatomic, readwrite) FIRFirestore *db;
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
   if (self = [super init]) {
@@ -18,5 +23,16 @@
   }
   return self;
 }
+
+
+
+//-(void)addNewWorkout
+
+//- (void)addNewWorkout(NSString *type) {
+
+//}
+
+
+
 
 @end

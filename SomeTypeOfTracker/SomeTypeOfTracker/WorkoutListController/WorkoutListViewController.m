@@ -6,6 +6,7 @@
 //
 
 #import "WorkoutListViewController.h"
+@import Firebase;
 
 @interface WorkoutListViewController ()
 
@@ -13,13 +14,35 @@
 
 @end
 
-@implementation WorkoutListViewController
+@implementation WorkoutListViewController 
+//NSString *useremail = FIRUser.
+- (void)signUserOut{
+    NSError *signOutError;
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    if (!status) {
+      NSLog(@"Error signing out: %@", signOutError);
+      //      [self ];
+      return;
+    }
+}
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  self.tableView.dataSource = self;
-  
-  // Do any additional setup after loading the view.
+    [super viewDidLoad];
+    //  NSLog(@"user %@", FIRUser);
+    self.tableView.dataSource = self;
+    
+    // Do any additional setup after loading the view.
+}
+
+
+- (IBAction)signOutButton:(id)sender {
+    //    sign user out with the following function after confirming user exist
+//    NSError *signOutError;
+//    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+//    if (!status) {
+//        NSLog(@"Error signing out: %@", signOutError);
+//        return;
+//    }
 }
 
 /*
@@ -39,9 +62,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workoutCell" forIndexPath:indexPath];
-//  Movie *movie = self.movies[indexPath.row];
-  cell.textLabel.text = @"New Workout";
-  return cell;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workoutCell" forIndexPath:indexPath];
+    //  Movie *movie = self.movies[indexPath.row];
+    cell.textLabel.text = @"New Workout";
+    return cell;
 }
 @end

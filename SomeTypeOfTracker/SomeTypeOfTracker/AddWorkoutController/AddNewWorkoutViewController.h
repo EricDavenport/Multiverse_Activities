@@ -9,7 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddNewWorkoutViewController : UIViewController
+@interface AddNewWorkoutViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+{
+  NSArray * types;
+  NSString * selectedType;
+}
+
+//- (void)addNewWorkout;
 
 @end
 

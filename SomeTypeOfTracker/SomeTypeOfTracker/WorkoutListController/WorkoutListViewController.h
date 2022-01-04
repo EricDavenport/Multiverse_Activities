@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WorkoutListViewController : UIViewController
+@interface WorkoutListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+  NSArray * workouts;
+}
+
 
 @end
 

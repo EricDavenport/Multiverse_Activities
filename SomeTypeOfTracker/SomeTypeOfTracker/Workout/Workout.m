@@ -9,6 +9,7 @@
 
 @import FirebaseFirestore;
 @import FirebaseCore;
+@import Firebase;
 
 @implementation Workout
 
@@ -16,10 +17,11 @@
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
   if (self = [super init]) {
-    self.type = dict[@"type"];
-    self.calories = dict[@"calories"];
-    self.date = dict[@"date"];
-    self.time = dict[@"time"];
+    self.type = dict[@"Type"];
+    self.calories = dict[@"Talories"];
+    self.date = dict[@"Date"];
+    self.time = dict[@"Time"];
+    self.uid = dict[@"UserId"];
   }
   return self;
 }

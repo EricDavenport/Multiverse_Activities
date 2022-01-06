@@ -73,7 +73,7 @@
                     <connections>
                         <outlet property="emailField" destination="Dpz-08-Ny7" id="euj-aD-HdB"/>
                         <outlet property="passwordField" destination="Gto-Ug-Cwx" id="FfZ-Lg-4Or"/>
-                        <segue destination="7SN-9C-MYP" kind="presentation" identifier="WorkoutNavi" modalPresentationStyle="fullScreen" id="nmc-xg-1QV"/>
+                        <segue destination="7SN-9C-MYP" kind="presentation" identifier="WorkoutNavi" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="nmc-xg-1QV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,12 +115,13 @@
                     <navigationItem key="navigationItem" id="p3l-IY-OMB">
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="hxi-lN-KjB">
                             <connections>
-                                <action selector="signOutButton:" destination="7Fi-JG-8bQ" id="ymL-xH-Ifq"/>
+                                <action selector="signOutButton:" destination="7Fi-JG-8bQ" id="uRb-BM-3yb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Workout" id="iv4-e3-zB9">
                             <connections>
-                                <segue destination="iDN-vP-gQx" kind="presentation" id="AEa-yn-5zO"/>
+                                <action selector="addWorkoutButton:" destination="7Fi-JG-8bQ" id="UxN-3n-aUb"/>
+                                <segue destination="iDN-vP-gQx" kind="presentation" identifier="AddWorkSegue" modalPresentationStyle="fullScreen" id="egX-w9-IYf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -137,19 +138,19 @@
             <objects>
                 <viewController id="iDN-vP-gQx" customClass="AddNewWorkoutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0Q-l7-oOB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CD-eY-Uhr">
-                                <rect key="frame" x="157" y="221" width="100" height="34"/>
+                                <rect key="frame" x="157" y="265" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="jtn-Y9-fa7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-Jb-hjm">
-                                <rect key="frame" x="157" y="339" width="100" height="34"/>
+                                <rect key="frame" x="157" y="382.5" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gjb-ef-QjV"/>
                                 </constraints>
@@ -157,31 +158,31 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u3-Hv-PLY">
-                                <rect key="frame" x="75" y="227.5" width="62" height="21"/>
+                                <rect key="frame" x="75" y="271.5" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CQ-HD-X24">
-                                <rect key="frame" x="96" y="286.5" width="36" height="21"/>
+                                <rect key="frame" x="96" y="330.5" width="36" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoF-GR-QrP">
-                                <rect key="frame" x="99" y="345.5" width="38" height="21"/>
+                                <rect key="frame" x="99" y="389" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-I9-aMq">
-                                <rect key="frame" x="138" y="55" width="138" height="21"/>
+                                <rect key="frame" x="138" y="99" width="138" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urq-ro-juy">
-                                <rect key="frame" x="179.5" y="473" width="55.5" height="31"/>
+                                <rect key="frame" x="179.5" y="516.5" width="55.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
@@ -189,29 +190,42 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="GRy-zV-4XM">
-                                <rect key="frame" x="152" y="280" width="110" height="34"/>
+                                <rect key="frame" x="152" y="324" width="110" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="kHR-j7-3y7"/>
                                 </constraints>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx9-Bg-nD3">
-                                <rect key="frame" x="55" y="141" width="304" height="55"/>
+                                <rect key="frame" x="55" y="185" width="304" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="KQX-ee-53K"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-Qb-R28">
+                                <rect key="frame" x="172.5" y="572.5" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="iDN-vP-gQx" eventType="touchUpInside" id="dJd-Js-TVB"/>
+                                    <action selector="saveButton:" destination="iDN-vP-gQx" eventType="touchUpInside" id="1IM-yv-os6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cde-HI-FFd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Bge-Qb-R28" firstAttribute="centerX" secondItem="u0Q-l7-oOB" secondAttribute="centerX" id="1zs-XP-UqV"/>
                             <constraint firstItem="1u3-Hv-PLY" firstAttribute="centerY" secondItem="1CD-eY-Uhr" secondAttribute="centerY" id="2t9-ZR-UsO"/>
                             <constraint firstItem="qoF-GR-QrP" firstAttribute="leading" secondItem="Cde-HI-FFd" secondAttribute="leading" constant="99" id="4r0-YZ-JvE"/>
                             <constraint firstItem="GRy-zV-4XM" firstAttribute="leading" secondItem="6CQ-HD-X24" secondAttribute="trailing" constant="20" id="5hV-1A-eh3"/>
                             <constraint firstItem="kx9-Bg-nD3" firstAttribute="leading" secondItem="Cde-HI-FFd" secondAttribute="leading" constant="55" id="7yY-W0-RiI"/>
+                            <constraint firstItem="Bge-Qb-R28" firstAttribute="top" secondItem="urq-ro-juy" secondAttribute="bottom" constant="25" id="9OS-vQ-6do"/>
                             <constraint firstItem="4JF-I9-aMq" firstAttribute="top" secondItem="Cde-HI-FFd" secondAttribute="top" constant="55" id="9Pc-7i-bQM"/>
                             <constraint firstItem="kx9-Bg-nD3" firstAttribute="top" secondItem="4JF-I9-aMq" secondAttribute="bottom" constant="65" id="9h1-GV-gFs"/>
                             <constraint firstItem="qoF-GR-QrP" firstAttribute="top" secondItem="6CQ-HD-X24" secondAttribute="bottom" constant="38" id="DVw-sj-qEe"/>
                             <constraint firstItem="kx9-Bg-nD3" firstAttribute="centerX" secondItem="u0Q-l7-oOB" secondAttribute="centerX" id="FF7-BG-OCT"/>
+                            <constraint firstItem="GRy-zV-4XM" firstAttribute="width" secondItem="1CD-eY-Uhr" secondAttribute="width" multiplier="1.1" id="Fkf-5C-Tvh"/>
+                            <constraint firstItem="Bge-Qb-R28" firstAttribute="height" secondItem="urq-ro-juy" secondAttribute="height" id="Jjs-pp-oWm"/>
                             <constraint firstItem="1CD-eY-Uhr" firstAttribute="top" secondItem="kx9-Bg-nD3" secondAttribute="bottom" constant="25" id="Kcp-Sy-2W6"/>
                             <constraint firstItem="4JF-I9-aMq" firstAttribute="centerX" secondItem="u0Q-l7-oOB" secondAttribute="centerX" id="Kln-aN-6QO"/>
                             <constraint firstItem="qoF-GR-QrP" firstAttribute="centerY" secondItem="UC9-Jb-hjm" secondAttribute="centerY" id="KnI-pL-ywA"/>
@@ -230,6 +244,7 @@
                             <constraint firstItem="1CD-eY-Uhr" firstAttribute="leading" secondItem="1u3-Hv-PLY" secondAttribute="trailing" constant="20" id="z4d-GS-mrG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V8f-cg-eiP"/>
                     <connections>
                         <outlet property="calorieTextField" destination="1CD-eY-Uhr" id="6s4-xc-S0X"/>
                         <outlet property="datePicker" destination="GRy-zV-4XM" id="5S0-Fj-AO7"/>

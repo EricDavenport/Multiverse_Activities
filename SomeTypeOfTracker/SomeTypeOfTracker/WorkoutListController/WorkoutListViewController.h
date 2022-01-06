@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WorkoutListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-  NSArray * workouts;
+  NSMutableArray * workouts;
 }
 
 

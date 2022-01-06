@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FirebaseDB : NSObject
 
-- (void)addAdaLovelace;
+- (void)loadUserWorkoutsFB: (void (^) (NSError *, NSArray *)) completion;
 
 @end
 

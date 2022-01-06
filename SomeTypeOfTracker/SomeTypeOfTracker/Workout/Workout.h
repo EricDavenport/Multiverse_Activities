@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString * calories;
 @property NSDate * date;
 @property NSString * time;
+@property NSString * uid;
 
 
 - (instancetype)initWithDict: (NSDictionary *)dict;

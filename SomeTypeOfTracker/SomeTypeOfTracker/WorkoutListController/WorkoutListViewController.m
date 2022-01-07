@@ -8,6 +8,8 @@
 #import "WorkoutListViewController.h"
 #import "Workout.h"
 #import "FirebaseDB.h"
+#import "WorkoutCell.h"
+#import "DetailViewController.h"
 @import Firebase;
 @import FirebaseFirestore;
 
@@ -25,41 +27,7 @@
 
 @implementation WorkoutListViewController 
 NSString * uidwl;
-;
-
-//- (void)loadUserWorkouts{
-//  FIRCollectionReference * workoutRef = [self.db collectionWithPath:@"workouts"];
-//  [workoutRef getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-//    if (error != nil) {
-//      NSLog(@"Error getting documents: %@", error);
-//    } else {
-//      for (FIRDocumentSnapshot * document in snapshot.documents) {
-//        Workout * work = [[Workout alloc] initWithDict:document.data];
-//
-//        NSLog(@"workout loaded: %@", work.type);
-//      }
-//    }
-//  }];
-//}
-
-//- (void)snapListener{
-//  [[[self.db collectionWithPath:@"workouts"] queryWhereField:@"UserId" isEqualTo:uidwl] addSnapshotListener:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-//    if (snapshot == nil) {
-//      NSLog(@"Error fetching documents: %@", error);
-//      return;
-//    } else {
-//      for (FIRDocumentSnapshot * wkts in snapshot.documents) {
-//        Workout * work = [[Workout alloc] initWithDict:wkts.data];
-////        [wks addObject:work];
-//        NSLog(@"test: %@\n", wks);
-//      }
-//      NSLog(@"all user workouts: %@", wks);
-//    }
-//  }];
-//  dispatch_async(dispatch_get_main_queue(), ^{
-//    [self.tableView reloadData];
-//  });
-//}
+@synthesize tableView;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -102,15 +70,17 @@ NSString * uidwl;
   [self performSegueWithIdentifier:@"AddWorkSegue" sender:self];
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if([segue.identifier  isEqual: @"DetailNavi"]) {
+    NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+    DetailViewController * vc = [segue destinationViewController];
+//    vc.type = [_wks objectAtIndex:indexPath.row];
+  }
+}
+
 
 #pragma mark - UITableViewDataSource
 
@@ -120,8 +90,14 @@ NSString * uidwl;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"workoutCell" forIndexPath:indexPath];
+  if (cell == nil) {
+//    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"workoutCell"]];
+  }
   Workout * worksCell = self.wks[indexPath.row];
   cell.textLabel.text = worksCell.type;
+  cell.imageView.image = [UIImage imageNamed:worksCell.type];
+//  cell.detailTextLabel.text = worksCell.calories;
+//  [cell contentConfiguration]
   return cell;
 }
 @end

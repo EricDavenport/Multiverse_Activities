@@ -36,7 +36,7 @@ NSString * uid;
     _current.uid = uid;
   }
 
-  types = @[@"Core", @"Cycle", @"HIIT", @"Pilates", @"Run", @"Strength", @"Walk", @"Yoga"];
+  types = @[@"Core", @"Cycle", @"HIIT", @"Boxing", @"Run", @"Strength", @"Push-Ups", @"Yoga"];
 
   self.typePicker.delegate = self;
   self.typePicker.dataSource = self;

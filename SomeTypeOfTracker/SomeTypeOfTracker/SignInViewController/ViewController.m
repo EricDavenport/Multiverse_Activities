@@ -44,7 +44,7 @@
   ];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if(segue.identifier == @"WorkoutNavi") {
+  if([segue.identifier  isEqual: @"WorkoutNavi"]) {
     AddNewWorkoutViewController * vc = [segue destinationViewController];
     //    vc.uiiid = @"";
   }

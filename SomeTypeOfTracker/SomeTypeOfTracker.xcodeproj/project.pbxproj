@@ -16,10 +16,12 @@
 		582BC5952780B0D000E035B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BC5942780B0D000E035B3 /* main.m */; };
 		582BC5A02780CA9F00E035B3 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BC59F2780CA9F00E035B3 /* APIClient.m */; };
 		582BC5A32780D75A00E035B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 582BC5A22780D75A00E035B3 /* GoogleService-Info.plist */; };
+		5894F3BD2788AC9900DF790C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5894F3BC2788AC9900DF790C /* DetailViewController.m */; };
 		58DA49DC278322E50048BD7D /* WorkoutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA49DB278322E50048BD7D /* WorkoutListViewController.m */; };
 		58DA49E4278323D90048BD7D /* AddNewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA49E3278323D90048BD7D /* AddNewWorkoutViewController.m */; };
 		58DA49E7278338050048BD7D /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA49E6278338050048BD7D /* Workout.m */; };
 		58DA49EB2783761A0048BD7D /* FirebaseDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA49EA2783761A0048BD7D /* FirebaseDB.m */; };
+		58DF8D23278885C400E5D6FB /* WorkoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DF8D22278885C400E5D6FB /* WorkoutCell.m */; };
 		92512E8314D75DCEC5C198CC /* Pods_SomeTypeOfTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3358830F54FF8E0934837AE /* Pods_SomeTypeOfTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		582BC59E2780CA9F00E035B3 /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		582BC59F2780CA9F00E035B3 /* APIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		582BC5A22780D75A00E035B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5894F3BB2788AC9900DF790C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5894F3BC2788AC9900DF790C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		58DA49DA278322E50048BD7D /* WorkoutListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutListViewController.h; sourceTree = "<group>"; };
 		58DA49DB278322E50048BD7D /* WorkoutListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutListViewController.m; sourceTree = "<group>"; };
 		58DA49E2278323D90048BD7D /* AddNewWorkoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewWorkoutViewController.h; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		58DA49E6278338050048BD7D /* Workout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 		58DA49E92783761A0048BD7D /* FirebaseDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseDB.h; sourceTree = "<group>"; };
 		58DA49EA2783761A0048BD7D /* FirebaseDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirebaseDB.m; sourceTree = "<group>"; };
+		58DF8D21278885C400E5D6FB /* WorkoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutCell.h; sourceTree = "<group>"; };
+		58DF8D22278885C400E5D6FB /* WorkoutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutCell.m; sourceTree = "<group>"; };
 		A77779288E22E85C8881E82C /* Pods-SomeTypeOfTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeTypeOfTracker.debug.xcconfig"; path = "Target Support Files/Pods-SomeTypeOfTracker/Pods-SomeTypeOfTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		F3358830F54FF8E0934837AE /* Pods_SomeTypeOfTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SomeTypeOfTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,8 +110,11 @@
 				58DA49D7278322230048BD7D /* SignInViewController */,
 				58DA49E1278323690048BD7D /* AddWorkoutController */,
 				58DA49DD278322F80048BD7D /* WorkoutListController */,
+				58DF8D24278885CD00E5D6FB /* WorkoutCell */,
 				582BC5932780B0D000E035B3 /* Info.plist */,
 				582BC5A22780D75A00E035B3 /* GoogleService-Info.plist */,
+				582BC58E2780B0D000E035B3 /* Assets.xcassets */,
+				5894F3BE2788ACA100DF790C /* DetailViewController */,
 			);
 			path = SomeTypeOfTracker;
 			sourceTree = "<group>";
@@ -117,6 +126,15 @@
 				582BC59F2780CA9F00E035B3 /* APIClient.m */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		5894F3BE2788ACA100DF790C /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5894F3BB2788AC9900DF790C /* DetailViewController.h */,
+				5894F3BC2788AC9900DF790C /* DetailViewController.m */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		58DA49D7278322230048BD7D /* SignInViewController */ = {
@@ -151,7 +169,6 @@
 			children = (
 				58DA49DA278322E50048BD7D /* WorkoutListViewController.h */,
 				58DA49DB278322E50048BD7D /* WorkoutListViewController.m */,
-				582BC58E2780B0D000E035B3 /* Assets.xcassets */,
 			);
 			path = WorkoutListController;
 			sourceTree = "<group>";
@@ -181,6 +198,15 @@
 				58DA49EA2783761A0048BD7D /* FirebaseDB.m */,
 			);
 			path = FirebaseDB;
+			sourceTree = "<group>";
+		};
+		58DF8D24278885CD00E5D6FB /* WorkoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				58DF8D21278885C400E5D6FB /* WorkoutCell.h */,
+				58DF8D22278885C400E5D6FB /* WorkoutCell.m */,
+			);
+			path = WorkoutCell;
 			sourceTree = "<group>";
 		};
 		CEA02ABCC66A18F133A95805 /* Pods */ = {
@@ -326,11 +352,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				582BC5A02780CA9F00E035B3 /* APIClient.m in Sources */,
+				58DF8D23278885C400E5D6FB /* WorkoutCell.m in Sources */,
 				582BC58A2780B0CF00E035B3 /* ViewController.m in Sources */,
 				58DA49DC278322E50048BD7D /* WorkoutListViewController.m in Sources */,
 				582BC5842780B0CF00E035B3 /* AppDelegate.m in Sources */,
 				582BC5952780B0D000E035B3 /* main.m in Sources */,
 				58DA49E4278323D90048BD7D /* AddNewWorkoutViewController.m in Sources */,
+				5894F3BD2788AC9900DF790C /* DetailViewController.m in Sources */,
 				582BC5872780B0CF00E035B3 /* SceneDelegate.m in Sources */,
 				58DA49EB2783761A0048BD7D /* FirebaseDB.m in Sources */,
 				58DA49E7278338050048BD7D /* Workout.m in Sources */,
